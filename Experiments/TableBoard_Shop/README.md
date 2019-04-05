@@ -54,7 +54,7 @@ Note:
 ## function
 ### insert.php 수정
 [여기에 insert.php 를 어떻게 수정했는지, 설명을 작성하세요.
-아래 구문을 통해 처리했다. (큰 따옴표는 중복문제 때문에 \"와 같이 입력함) 
+아래 구문을 통해 처리했다. (큰 따옴표는 중복문제 때문에 \\"와 같이 입력함) 
 자료형에 따라 따옴표 부착 여부가 달라진다. 
 
 $sql = "insert into tableboard_shop (date, order_id, name, price, quantity)
