@@ -5,7 +5,7 @@
 $connect = mysql_connect("localhost","kdk","1111");
 $db_con = mysql_select_db("kdk_db", $connect);
 
-$sql = "select * from tableboard_shop order by desc;";
+$sql = "select * from tableboard_shop order by num desc;";
 $result = mysql_query($sql, $connect);
 ?>
 
@@ -63,9 +63,9 @@ $result = mysql_query($sql, $connect);
                                 <td class=\"column1\">$row[date]</td>
                                 <td class=\"column2\">$row[order_id]</td>
                                 <td class=\"column3\">$row[name]</td>
-                                <td class=\"column4\">$.$row[price]</td>
+                                <td class=\"column4\">$$row[price]</td>
                                 <td class=\"column5\">$row[quantity]</td>
-                                <td class=\"column6\">$total</td>
+                                <td class=\"column6\">$$total</td>
                             </tr>
                             ";
                             }

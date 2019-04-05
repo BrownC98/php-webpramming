@@ -10,7 +10,7 @@
 $connect = mysql_connect("localhost","kdk","1111");
 $db_con = mysql_select_db("kdk_db", $connect);
 
-$sql = "delete from tableboard_shop where = $_GET[num];";
+$sql = "delete from tableboard_shop where num = $_GET[num];";
 $result = mysql_query($sql,$connect);
 
 # 참고 : 에러 메시지 출력 방법

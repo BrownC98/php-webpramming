@@ -64,12 +64,13 @@ if(isset($_GET[num])) {
                             if(isset($_GET[num])) { //update 의 경우!
                                 $row = mysql_fetch_array($result)
                                 ?>
-                                <td class="column1"> <input name="date" type="text" value="<? $row[date] ?>" /> </td>
-                                <td class="column2"> <input name="order_id" type="number" value="<? $row[order_id] ?>" /> </td>
-                                <td class="column3"> <input name="name" type="text" value="<?  $row[name] ?>" /> </td>
-                                <td class="column4"> <input name="price" type="number" placeholder="$" style="text-align: right;" value="<? $row[price] ?>" /> </td>
-                                <td class="column5"> <input name="quantity" type="number" value="<? #$row[quantity] ?>" style="text-align: right;" /> </td>
-                                <td class="column6"> $<span id="total"> <? $row[price]*$row[quantity] ?> </span> </td>
+                                <td class="column1"> <input name="date" type="text" value="<? echo "$row[date]"; ?>" /> </td>
+                                <td class="column2"> <input name="order_id" type="number" value="<? echo "$row[order_id]"; ?>" /> </td>
+                                <td class="column3"> <input name="name" type="text" value="<? echo "$row[name]"; ?>" /> </td>
+                                <td class="column4"> <input name="price" type="number" placeholder="$" style="text-align: right;" value="<? echo "$row[price]"; ?>" /> </td>
+                                <td class="column5"> <input name="quantity" type="number" value="<? echo "$row[quantity]"; ?>" style="text-align: right;" /> </td>
+
+                                <td class="column6"> $<span id="total"> <? $total = $row[price]*$row[quantity]; echo "$total"; ?> </span> </td>
                                 <?php
                             } else {
                                 ?>

@@ -10,7 +10,8 @@
 $connect = mysql_connect("localhost","kdk","1111");
 $db_con = mysql_select_db("kdk_db", $connect);
 
-$sql = "insert into tableboard_shop values('$_POST[date]', '$_POST[order_id]', '$_POST[name]', '$_POST[price]','$_POST[quantity]');";
+$sql = "insert into tableboard_shop (date, order_id, name, price, quantity)
+VALUES(\"$_POST[date]\", $_POST[order_id], '$_POST[name]', $_POST[price], $_POST[quantity]);";
 $result = mysql_query($sql,$connect);
 
 # 참고 : 에러 메시지 출력 방법
